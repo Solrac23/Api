@@ -14,7 +14,11 @@ class SurveysController {
     })
 
     await surveysRepository.save(survey)
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> e633195582c73d6015d6ce8567212e55ca13c2d8
     return res.status(201).json(survey)
   }
 

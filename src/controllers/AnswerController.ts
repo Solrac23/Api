@@ -26,4 +26,8 @@ class AnswerController {
   }
 }
 
+<<<<<<< HEAD
 export { AnswerController }
+=======
+export { AnswerController }
+>>>>>>> e633195582c73d6015d6ce8567212e55ca13c2d8

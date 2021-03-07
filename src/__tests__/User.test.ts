@@ -14,7 +14,11 @@ describe('Users', () => {
     await connection.dropDatabase()
     await connection.close()
   })
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> e633195582c73d6015d6ce8567212e55ca13c2d8
   it('should be able to create a new user', async () => {
     const response = await request(app).post('/users').send({
       email: 'user@example.com',
@@ -22,7 +26,7 @@ describe('Users', () => {
     })
 
     expect(response.status).toBe(201)
-  })
+  }) 
 
   it('Should not be able to create a user with exists email.', async () => {
     const response = await request(app).post('/users').send({

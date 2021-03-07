@@ -14,7 +14,11 @@ describe('Surveys', () => {
     await connection.dropDatabase()
     await connection.close()
   })
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> e633195582c73d6015d6ce8567212e55ca13c2d8
   it('should be able to create a new survey', async () => {
     const response = await request(app).post('/surveys').send({
       title: 'Title Example',

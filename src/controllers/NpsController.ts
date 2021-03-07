@@ -14,6 +14,7 @@ class NpsController {
       value: Not(IsNull())
     })
 
+<<<<<<< HEAD
     const detractor = surveyUsers.filter((survey) =>
       survey.value >= 0 && survey.value <= 6
     ).length
@@ -23,6 +24,17 @@ class NpsController {
     ).length
 
     const promoters = surveyUsers.filter((survey) =>
+=======
+    const detractor = surveyUsers.filter((survey) => 
+      survey.value >= 0 && survey.value <= 6
+    ).length
+
+    const passive = surveyUsers.filter((survey) => 
+      survey.value >= 7 && survey.value <= 8
+    ).length
+
+    const promoters = surveyUsers.filter((survey) => 
+>>>>>>> e633195582c73d6015d6ce8567212e55ca13c2d8
       survey.value >= 9 && survey.value <= 10
     ).length
 
@@ -40,4 +52,8 @@ class NpsController {
   }
 }
 
+<<<<<<< HEAD
 export { NpsController }
+=======
+export { NpsController }
+>>>>>>> e633195582c73d6015d6ce8567212e55ca13c2d8
