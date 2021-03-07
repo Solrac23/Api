@@ -14,8 +14,7 @@ class SurveysController {
     })
 
     await surveysRepository.save(survey)
-
-
+    
     return res.status(201).json(survey)
   }
   
