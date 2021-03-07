@@ -16,7 +16,7 @@ class SendMailController{
     const surveysUsersRepository = getCustomRepository(SurveysUsersRepository)
 
     const user = await usersRepository.findOne({ email })
-    
+
     if(!user){
       throw new AppError('User does not exists.')
     }

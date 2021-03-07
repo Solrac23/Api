@@ -8,7 +8,7 @@ class UserController {
 
   async show(req: Request, res: Response) {
     const usersRepository = getCustomRepository(UsersRepository)
-    
+
     const users = await usersRepository.find()
 
     return res.json(users)
@@ -26,7 +26,7 @@ class UserController {
     try {
       await schema.validate(req.body, { abortEarly: false})
     } catch (err) {
-      throw new AppError(err)  
+      throw new AppError(err)
     }
 
     const userAlreadyExists = await usersRepository.findOne({
@@ -36,7 +36,7 @@ class UserController {
     if(userAlreadyExists) {
       throw new AppError("user already exists.")
     }
-    
+
     const user = usersRepository.create({
       name,
       email,

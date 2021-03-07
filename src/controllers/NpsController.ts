@@ -14,15 +14,15 @@ class NpsController {
       value: Not(IsNull())
     })
 
-    const detractor = surveyUsers.filter((survey) => 
+    const detractor = surveyUsers.filter((survey) =>
       survey.value >= 0 && survey.value <= 6
     ).length
 
-    const passive = surveyUsers.filter((survey) => 
+    const passive = surveyUsers.filter((survey) =>
       survey.value >= 7 && survey.value <= 8
     ).length
 
-    const promoters = surveyUsers.filter((survey) => 
+    const promoters = surveyUsers.filter((survey) =>
       survey.value >= 9 && survey.value <= 10
     ).length
 
