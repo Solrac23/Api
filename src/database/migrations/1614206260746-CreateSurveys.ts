@@ -1,4 +1,4 @@
-import {MigrationInterface, QueryRunner, Table} from "typeorm";
+import {MigrationInterface, QueryRunner, Table} from 'typeorm'
 
 export class CreateSurveys1614206260746 implements MigrationInterface {
 
@@ -8,21 +8,21 @@ export class CreateSurveys1614206260746 implements MigrationInterface {
 			columns:[
 				{
 					name: 'id',
-					type: "uuid",
+					type: 'uuid',
 					isPrimary: true,
 				},
 				{
 					name: 'title',
-					type: 'varchar'
+					type: 'varchar',
 				},
 				{
 					name: 'description',
-					type: 'varchar'
+					type: 'varchar',
 				},
 				{
 					name: 'create_at',
 					type: 'timestamp',
-					default: 'now()'
+					default: 'now()',
 				}
 			]
 		}))

@@ -1,4 +1,4 @@
-import {MigrationInterface, QueryRunner, Table} from "typeorm";
+import {MigrationInterface, QueryRunner, Table} from 'typeorm'
 
 export class CreateSurveysUsers1614486989477 implements MigrationInterface {
 
@@ -13,21 +13,21 @@ export class CreateSurveysUsers1614486989477 implements MigrationInterface {
 				},
 				{
 					name: 'user_id',
-					type: 'uuid'
+					type: 'uuid',
 				},
 				{
 					name: 'survey_id',
-					type: 'uuid'
+					type: 'uuid',
 				},
 				{
 					name: 'value',
 					type: 'number',
-					isNullable: true
+					isNullable: true,
 				},
 				{
 					name: 'created_at',
 					type: 'timestamp',
-					default: 'now()'
+					default: 'now()',
 				}
 			],
 			foreignKeys: [
@@ -37,7 +37,7 @@ export class CreateSurveysUsers1614486989477 implements MigrationInterface {
 					referencedColumnNames: ['id'],
 					columnNames: ['user_id'],
 					onDelete: 'CASCADE',
-					onUpdate: 'CASCADE'
+					onUpdate: 'CASCADE',
 				},
 				{
 					name: 'FKSurvey',
@@ -45,7 +45,7 @@ export class CreateSurveysUsers1614486989477 implements MigrationInterface {
 					referencedColumnNames: ['id'],
 					columnNames: ['survey_id'],
 					onDelete: 'CASCADE',
-					onUpdate: 'CASCADE'
+					onUpdate: 'CASCADE',
 				},
 			]
 		}))

@@ -1,4 +1,5 @@
-import { Column, CreateDateColumn, Entity, PrimaryColumn } from "typeorm"
+/* eslint-disable no-mixed-spaces-and-tabs */
+import { Column, CreateDateColumn, Entity, PrimaryColumn } from 'typeorm'
 import { v4 as uuid } from 'uuid'
 
 @Entity('surveys')
@@ -16,9 +17,9 @@ class Survey {
   create_at: Date
 
   constructor(){
-		if(!this.id) {
-			this.id = uuid()
-		}
+  	if(!this.id) {
+  		this.id = uuid()
+  	}
   }
 }
 
