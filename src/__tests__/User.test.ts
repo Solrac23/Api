@@ -6,14 +6,14 @@ import createConnection from '../database/connection'
 describe('Users', () => {
   beforeAll(async () => {
     const connection = await createConnection()
-    // await connection.dropDatabase()
     await connection.runMigrations()
   })
 
-  // afterAll(async () => {
-  //   const connection = await createConnection()
-  //   await connection.undoLastMigration()
-  // })
+  afterAll(async () => {
+    const connection = await createConnection()
+    await connection.dropDatabase()
+    await connection.close()
+  })
   
   it('should be able to create a new user', async () => {
     const response = await request(app).post('/users').send({
@@ -22,7 +22,7 @@ describe('Users', () => {
     })
 
     expect(response.status).toBe(201)
-  })
+  }) 
 
   it('Should not be able to create a user with exists email.', async () => {
     const response = await request(app).post('/users').send({

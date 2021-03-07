@@ -6,14 +6,14 @@ import createConnection from '../database/connection'
 describe('Surveys', () => {
   beforeAll(async () => {
     const connection = await createConnection()
-    // await connection.dropDatabase()
     await connection.runMigrations()
   })
 
-  // afterAll(async () => {
-  //   const connection = await createConnection()
-  //   await connection.undoLastMigration()
-  // })
+  afterAll(async () => {
+    const connection = await createConnection()
+    await connection.dropDatabase()
+    await connection.close()
+  })
   
   it('should be able to create a new survey', async () => {
     const response = await request(app).post('/surveys').send({
