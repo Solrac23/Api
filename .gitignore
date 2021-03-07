@@ -102,10 +102,6 @@ dist
 
 # TernJS port file
 .tern-port
-<<<<<<< HEAD
 
 node_modules
 yarn.lock
-=======
-node_modules
->>>>>>> e633195582c73d6015d6ce8567212e55ca13c2d8
